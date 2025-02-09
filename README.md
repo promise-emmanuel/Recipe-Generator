@@ -4,7 +4,9 @@ As a software engineer, I am constantly looking for ways to improve my skills an
 The system utilizes an AI model to create new recipes based on user-input ingredients and provides structured output that can be easily displayed as HTML. The goal of this project is to explore backend API development, AI integration, database management, and frontend rendering using JavaScript.
 
 Software Demo Video
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video - Vimeo](https://vimeo.com/1054889012/f77a0d0181?ts=0&share=copy)
+[Software Demo Video - YouTube](https://youtu.be/oDV1vbVLlzo)
+
 
 # Development Environment
 
