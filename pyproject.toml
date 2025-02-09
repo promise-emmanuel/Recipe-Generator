@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "recipe-generator"
+version = "0.1.0"
+description = ""
+authors = ["Promise Igbojionu <promiseemmanuel2019@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.115.8"}
+uvicorn = "^0.34.0"
+openai = "^1.61.0"
+jinja2 = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Promise Recipe Generator</h1>
+    
+    <label for="ingredients">Enter ingredients (comma-separated):</label>
+    <input type="text" id="ingredients" placeholder="chicken, rice etc...">
+    <button onclick="generateRecipe()">Generate Recipe</button>
+
+    <h2>Generated Recipe:</h2>
+    <div id="generated-recipe"></div>
+    <section id="recipes-container"></section>
+
+
+    <button onclick="saveRecipe()">Save Recipe</button>
+
+    <!-- Corrected navigation button -->
+    <button onclick="viewRecipes()">View Saved Recipes</button>
+
+    <!-- <script> -->
+        <!-- function navigateToRecipes() { -->
+            <!-- window.location.href = "recipes.html"; -->
+        <!-- } -->
+    <!-- </script> -->
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Recipes</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Saved Recipes</h1>
+    <div id="recipes-container"></div>
+
+    <a href="index.html"><button>Back to Generator</button></a>
+
+    <script>
+        // Fetch saved recipes when the page loads
+        async function fetchRecipes() {
+            try {
+                const response = await fetch("/view-recipes/");
+                if (!response.ok) throw new Error("Failed to fetch recipes");
+
+                const recipes = await response.json();
+                const container = document.getElementById("recipes-container");
+                container.innerHTML = "";
+
+                recipes.forEach(recipe => {
+                    const recipeCard = document.createElement("div");
+                    recipeCard.className = "recipe-card";
+
+                    recipeCard.innerHTML = `
+                        <h2>Recipe #${recipe.id}</h2>
+                        <p>${recipe.recipe}</p>
+                    `;
+
+                    container.appendChild(recipeCard);
+                });
+            } catch (error) {
+                console.error("Error fetching recipes:", error);
+            }
+        }
+
+        // Trigger fetch when page loads
+        window.onload = fetchRecipes;
+    </script>
+</body>
+</html>
